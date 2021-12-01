@@ -14905,7 +14905,7 @@ class Score {
         this.submitButton.addEventListener("click", ()=>{
             const playerName = document.getElementById("score-name").value ?? "Anonymous";
             const score = this.score;
-            _crossFetchDefault.default(`http://dreamlo.com/lb/9eJAhNf4sk-d8wCNvbubnQmjNrogtxR0aAGfXvFxfSAA/add/${playerName}/${score}`).then((response)=>{
+            _crossFetchDefault.default(`https://www.dreamlo.com/lb/9eJAhNf4sk-d8wCNvbubnQmjNrogtxR0aAGfXvFxfSAA/add/${playerName}/${score}`).then((response)=>{
                 if (response.ok) {
                     if (this.goToLeaderboard) this.goToLeaderboard();
                 } else {
@@ -15386,7 +15386,7 @@ class Leadeboard {
         });
     }
     init() {
-        _crossFetchDefault.default("http://dreamlo.com/lb/61a4abb88f418f1278df5a46/json").then((response)=>response.json()
+        _crossFetchDefault.default("https://www.dreamlo.com/lb/61a4abb88f418f1278df5a46/json").then((response)=>response.json()
         ).then((data)=>{
             this.leaderboardElements.innerHTML = "";
             const entries = Array.isArray(data.dreamlo.leaderboard.entry) ? data.dreamlo.leaderboard.entry : [
